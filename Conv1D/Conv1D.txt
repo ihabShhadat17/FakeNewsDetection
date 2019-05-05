@@ -1,0 +1,154 @@
+(6335, 2)
+                                               title label
+0  smell hillari feardaniel greenfield shillman j...  FAKE
+1  watch exact moment paul ryan commit polit suic...  FAKE
+2  kerri pari gestur sympathyu . s . secretari st...  REAL
+3  berni support twitter erupt anger dnc we tri w...  FAKE
+4  battl new york primari mattersit primari day n...  REAL
+WARNING:tensorflow:From C:\Users\Ihab Shhadat\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow\python\ops\resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From C:\Users\Ihab Shhadat\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding (Embedding)        (None, None, 200)         9768800   
+_________________________________________________________________
+conv1d (Conv1D)              (None, None, 200)         320200    
+_________________________________________________________________
+max_pooling1d (MaxPooling1D) (None, None, 200)         0         
+_________________________________________________________________
+dropout (Dropout)            (None, None, 200)         0         
+_________________________________________________________________
+lstm (LSTM)                  (None, 100)               120400    
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 100)               0         
+_________________________________________________________________
+dense (Dense)                (None, 100)               10100     
+_________________________________________________________________
+dense_1 (Dense)              (None, 1)                 101       
+=================================================================
+Total params: 10,219,601
+Trainable params: 10,219,601
+Non-trainable params: 0
+_________________________________________________________________
+Train on 3768 samples, validate on 1616 samples
+WARNING:tensorflow:From C:\Users\Ihab Shhadat\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-05-03 14:50:07.336527: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-05-03 14:50:08.485253: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce GTX 1060 with Max-Q Design major: 6 minor: 1 memoryClockRate(GHz): 1.48
+pciBusID: 0000:01:00.0
+totalMemory: 6.00GiB freeMemory: 4.97GiB
+2019-05-03 14:50:08.485965: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-03 14:50:08.895177: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-03 14:50:08.895676: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-03 14:50:08.895995: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-03 14:50:08.896379: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 4714 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1060 with Max-Q Design, pci bus id: 0000:01:00.0, compute capability: 6.1)
+Epoch 1/100
+2019-05-03 14:50:10.329308: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library cublas64_100.dll locally
+
+ 256/3768 [=>............................] - ETA: 1:43 - loss: 0.6942 - acc: 0.4727
+ 512/3768 [===>..........................] - ETA: 1:01 - loss: 0.6929 - acc: 0.5117
+ 768/3768 [=====>........................] - ETA: 46s - loss: 0.6928 - acc: 0.5117 
+1024/3768 [=======>......................] - ETA: 37s - loss: 0.6927 - acc: 0.5107
+1280/3768 [=========>....................] - ETA: 31s - loss: 0.6923 - acc: 0.5148
+1536/3768 [===========>..................] - ETA: 27s - loss: 0.6922 - acc: 0.5208
+1792/3768 [=============>................] - ETA: 23s - loss: 0.6917 - acc: 0.5273
+2048/3768 [===============>..............] - ETA: 19s - loss: 0.6910 - acc: 0.5337
+2304/3768 [=================>............] - ETA: 16s - loss: 0.6904 - acc: 0.5386
+2560/3768 [===================>..........] - ETA: 13s - loss: 0.6895 - acc: 0.5410
+2816/3768 [=====================>........] - ETA: 10s - loss: 0.6883 - acc: 0.5490
+3072/3768 [=======================>......] - ETA: 7s - loss: 0.6871 - acc: 0.5573 
+3328/3768 [=========================>....] - ETA: 4s - loss: 0.6859 - acc: 0.5622
+3584/3768 [===========================>..] - ETA: 1s - loss: 0.6831 - acc: 0.57342019-05-03 14:50:46.496184: W tensorflow/core/common_runtime/bfc_allocator.cc:211] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.28GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+
+3768/3768 [==============================] - 42s 11ms/sample - loss: 0.6810 - acc: 0.5815 - val_loss: 0.6213 - val_acc: 0.7723
+Epoch 2/100
+
+ 256/3768 [=>............................] - ETA: 29s - loss: 0.6162 - acc: 0.7852
+ 512/3768 [===>..........................] - ETA: 27s - loss: 0.5946 - acc: 0.8203
+ 768/3768 [=====>........................] - ETA: 25s - loss: 0.5710 - acc: 0.8320
+1024/3768 [=======>......................] - ETA: 23s - loss: 0.5523 - acc: 0.8213
+1280/3768 [=========>....................] - ETA: 21s - loss: 0.5271 - acc: 0.8258
+1536/3768 [===========>..................] - ETA: 19s - loss: 0.4956 - acc: 0.8359
+1792/3768 [=============>................] - ETA: 17s - loss: 0.4795 - acc: 0.8343
+2048/3768 [===============>..............] - ETA: 15s - loss: 0.4571 - acc: 0.8403
+2304/3768 [=================>............] - ETA: 13s - loss: 0.4541 - acc: 0.8416
+2560/3768 [===================>..........] - ETA: 10s - loss: 0.4375 - acc: 0.8441
+2816/3768 [=====================>........] - ETA: 8s - loss: 0.4277 - acc: 0.8438 
+3072/3768 [=======================>......] - ETA: 6s - loss: 0.4193 - acc: 0.8473
+3328/3768 [=========================>....] - ETA: 3s - loss: 0.4069 - acc: 0.8519
+3584/3768 [===========================>..] - ETA: 1s - loss: 0.4000 - acc: 0.8549
+3768/3768 [==============================] - 36s 10ms/sample - loss: 0.3944 - acc: 0.8554 - val_loss: 0.3035 - val_acc: 0.8756
+Epoch 3/100
+
+ 256/3768 [=>............................] - ETA: 29s - loss: 0.2250 - acc: 0.9141
+ 512/3768 [===>..........................] - ETA: 27s - loss: 0.1967 - acc: 0.9355
+ 768/3768 [=====>........................] - ETA: 25s - loss: 0.1743 - acc: 0.9479
+1024/3768 [=======>......................] - ETA: 22s - loss: 0.1756 - acc: 0.9424
+1280/3768 [=========>....................] - ETA: 20s - loss: 0.1700 - acc: 0.9422
+1536/3768 [===========>..................] - ETA: 18s - loss: 0.1657 - acc: 0.9440
+1792/3768 [=============>................] - ETA: 16s - loss: 0.1541 - acc: 0.9475
+2048/3768 [===============>..............] - ETA: 14s - loss: 0.1513 - acc: 0.9482
+2304/3768 [=================>............] - ETA: 12s - loss: 0.1456 - acc: 0.9501
+2560/3768 [===================>..........] - ETA: 10s - loss: 0.1439 - acc: 0.9500
+2816/3768 [=====================>........] - ETA: 8s - loss: 0.1383 - acc: 0.9528 
+3072/3768 [=======================>......] - ETA: 5s - loss: 0.1383 - acc: 0.9525
+3328/3768 [=========================>....] - ETA: 3s - loss: 0.1349 - acc: 0.9531
+3584/3768 [===========================>..] - ETA: 1s - loss: 0.1375 - acc: 0.9528
+3768/3768 [==============================] - 35s 9ms/sample - loss: 0.1332 - acc: 0.9544 - val_loss: 0.2741 - val_acc: 0.9047
+Epoch 4/100
+
+ 256/3768 [=>............................] - ETA: 30s - loss: 0.0236 - acc: 0.9922
+ 512/3768 [===>..........................] - ETA: 28s - loss: 0.0289 - acc: 0.9902
+ 768/3768 [=====>........................] - ETA: 25s - loss: 0.0323 - acc: 0.9883
+1024/3768 [=======>......................] - ETA: 23s - loss: 0.0367 - acc: 0.9883
+1280/3768 [=========>....................] - ETA: 21s - loss: 0.0457 - acc: 0.9852
+1536/3768 [===========>..................] - ETA: 19s - loss: 0.0414 - acc: 0.9870
+1792/3768 [=============>................] - ETA: 17s - loss: 0.0383 - acc: 0.9883
+2048/3768 [===============>..............] - ETA: 14s - loss: 0.0351 - acc: 0.9897
+2304/3768 [=================>............] - ETA: 12s - loss: 0.0337 - acc: 0.9905
+2560/3768 [===================>..........] - ETA: 10s - loss: 0.0369 - acc: 0.9895
+2816/3768 [=====================>........] - ETA: 8s - loss: 0.0370 - acc: 0.9901 
+3072/3768 [=======================>......] - ETA: 5s - loss: 0.0359 - acc: 0.9902
+3328/3768 [=========================>....] - ETA: 3s - loss: 0.0393 - acc: 0.9895
+3584/3768 [===========================>..] - ETA: 1s - loss: 0.0396 - acc: 0.9891
+3768/3768 [==============================] - 34s 9ms/sample - loss: 0.0386 - acc: 0.9894 - val_loss: 0.3266 - val_acc: 0.8892
+Epoch 00004: early stopping
+
+ 32/951 [>.............................] - ETA: 18s - loss: 0.6250 - acc: 0.8438
+ 64/951 [=>............................] - ETA: 12s - loss: 0.3677 - acc: 0.9062
+ 96/951 [==>...........................] - ETA: 10s - loss: 0.3969 - acc: 0.8750
+128/951 [===>..........................] - ETA: 9s - loss: 0.3131 - acc: 0.8984 
+160/951 [====>.........................] - ETA: 8s - loss: 0.2886 - acc: 0.9000
+192/951 [=====>........................] - ETA: 7s - loss: 0.2721 - acc: 0.8958
+224/951 [======>.......................] - ETA: 6s - loss: 0.2743 - acc: 0.8929
+256/951 [=======>......................] - ETA: 6s - loss: 0.2793 - acc: 0.8906
+288/951 [========>.....................] - ETA: 6s - loss: 0.3103 - acc: 0.8785
+320/951 [=========>....................] - ETA: 5s - loss: 0.2820 - acc: 0.8906
+352/951 [==========>...................] - ETA: 5s - loss: 0.3107 - acc: 0.8864
+384/951 [===========>..................] - ETA: 4s - loss: 0.3243 - acc: 0.8880
+416/951 [============>.................] - ETA: 4s - loss: 0.3044 - acc: 0.8942
+448/951 [=============>................] - ETA: 4s - loss: 0.3128 - acc: 0.8929
+480/951 [==============>...............] - ETA: 4s - loss: 0.3077 - acc: 0.8958
+512/951 [===============>..............] - ETA: 3s - loss: 0.3085 - acc: 0.8945
+544/951 [================>.............] - ETA: 3s - loss: 0.2982 - acc: 0.8989
+576/951 [=================>............] - ETA: 3s - loss: 0.2911 - acc: 0.9010
+608/951 [==================>...........] - ETA: 2s - loss: 0.2882 - acc: 0.8997
+640/951 [===================>..........] - ETA: 2s - loss: 0.2984 - acc: 0.8953
+672/951 [====================>.........] - ETA: 2s - loss: 0.3070 - acc: 0.8899
+704/951 [=====================>........] - ETA: 2s - loss: 0.3079 - acc: 0.8892
+736/951 [======================>.......] - ETA: 1s - loss: 0.3011 - acc: 0.8913
+768/951 [=======================>......] - ETA: 1s - loss: 0.2978 - acc: 0.8906
+800/951 [========================>.....] - ETA: 1s - loss: 0.2923 - acc: 0.8925
+832/951 [=========================>....] - ETA: 0s - loss: 0.2905 - acc: 0.8918
+864/951 [==========================>...] - ETA: 0s - loss: 0.2964 - acc: 0.8912
+896/951 [===========================>..] - ETA: 0s - loss: 0.2903 - acc: 0.8940
+928/951 [============================>.] - ETA: 0s - loss: 0.2843 - acc: 0.8955
+951/951 [==============================] - 8s 8ms/sample - loss: 0.2846 - acc: 0.8938
+[0.28458186764697047, 0.893796]
+[Finished in 280.5s]

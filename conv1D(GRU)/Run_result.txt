@@ -1,0 +1,136 @@
+(6335, 2)
+                                               title label
+0  smell hillari feardaniel greenfield shillman j...  FAKE
+1  watch exact moment paul ryan commit polit suic...  FAKE
+2  kerri pari gestur sympathyu . s . secretari st...  REAL
+3  berni support twitter erupt anger dnc we tri w...  FAKE
+4  battl new york primari mattersit primari day n...  REAL
+WARNING:tensorflow:From C:\Users\Ihab Shhadat\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow\python\ops\resource_variable_ops.py:435: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From C:\Users\Ihab Shhadat\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow\python\keras\layers\core.py:143: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding (Embedding)        (None, None, 200)         9768800   
+_________________________________________________________________
+conv1d (Conv1D)              (None, None, 200)         320200    
+_________________________________________________________________
+max_pooling1d (MaxPooling1D) (None, None, 200)         0         
+_________________________________________________________________
+dropout (Dropout)            (None, None, 200)         0         
+_________________________________________________________________
+gru (GRU)                    (None, 100)               90300     
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 100)               0         
+_________________________________________________________________
+dense (Dense)                (None, 100)               10100     
+_________________________________________________________________
+dense_1 (Dense)              (None, 1)                 101       
+=================================================================
+Total params: 10,189,501
+Trainable params: 10,189,501
+Non-trainable params: 0
+_________________________________________________________________
+Train on 3768 samples, validate on 1616 samples
+WARNING:tensorflow:From C:\Users\Ihab Shhadat\AppData\Local\Programs\Python\Python37\lib\site-packages\tensorflow\python\ops\math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-05-03 23:39:37.202567: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-05-03 23:39:38.697680: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: GeForce GTX 1060 with Max-Q Design major: 6 minor: 1 memoryClockRate(GHz): 1.48
+pciBusID: 0000:01:00.0
+totalMemory: 6.00GiB freeMemory: 4.97GiB
+2019-05-03 23:39:38.699675: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-03 23:39:44.164738: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-03 23:39:44.165895: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-03 23:39:44.166608: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-03 23:39:44.175437: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 4714 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1060 with Max-Q Design, pci bus id: 0000:01:00.0, compute capability: 6.1)
+Epoch 1/100
+2019-05-03 23:39:46.372107: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library cublas64_100.dll locally
+
+ 256/3768 [=>............................] - ETA: 3:21 - loss: 0.6940 - acc: 0.4883
+ 512/3768 [===>..........................] - ETA: 2:05 - loss: 0.6939 - acc: 0.4922
+ 768/3768 [=====>........................] - ETA: 1:34 - loss: 0.6931 - acc: 0.5052
+1024/3768 [=======>......................] - ETA: 1:18 - loss: 0.6921 - acc: 0.5156
+1280/3768 [=========>....................] - ETA: 1:06 - loss: 0.6915 - acc: 0.5180
+1536/3768 [===========>..................] - ETA: 56s - loss: 0.6920 - acc: 0.5111 
+1792/3768 [=============>................] - ETA: 48s - loss: 0.6921 - acc: 0.5106
+2048/3768 [===============>..............] - ETA: 40s - loss: 0.6920 - acc: 0.5142
+2304/3768 [=================>............] - ETA: 33s - loss: 0.6905 - acc: 0.5252
+2560/3768 [===================>..........] - ETA: 27s - loss: 0.6898 - acc: 0.5297
+2816/3768 [=====================>........] - ETA: 21s - loss: 0.6890 - acc: 0.5344
+3072/3768 [=======================>......] - ETA: 15s - loss: 0.6884 - acc: 0.5381
+3328/3768 [=========================>....] - ETA: 9s - loss: 0.6876 - acc: 0.5439 
+3584/3768 [===========================>..] - ETA: 3s - loss: 0.6859 - acc: 0.5552
+3768/3768 [==============================] - 91s 24ms/sample - loss: 0.6848 - acc: 0.5605 - val_loss: 0.6480 - val_acc: 0.7420
+Epoch 2/100
+
+ 256/3768 [=>............................] - ETA: 1:12 - loss: 0.6355 - acc: 0.7891
+ 512/3768 [===>..........................] - ETA: 1:06 - loss: 0.6294 - acc: 0.7969
+ 768/3768 [=====>........................] - ETA: 58s - loss: 0.6217 - acc: 0.8047 
+1024/3768 [=======>......................] - ETA: 52s - loss: 0.6123 - acc: 0.7998
+1280/3768 [=========>....................] - ETA: 47s - loss: 0.5995 - acc: 0.8148
+1536/3768 [===========>..................] - ETA: 42s - loss: 0.5896 - acc: 0.8223
+1792/3768 [=============>................] - ETA: 37s - loss: 0.5781 - acc: 0.8242
+2048/3768 [===============>..............] - ETA: 32s - loss: 0.5657 - acc: 0.8257
+2304/3768 [=================>............] - ETA: 27s - loss: 0.5507 - acc: 0.8307
+2560/3768 [===================>..........] - ETA: 22s - loss: 0.5406 - acc: 0.8293
+2816/3768 [=====================>........] - ETA: 17s - loss: 0.5207 - acc: 0.8349
+3072/3768 [=======================>......] - ETA: 13s - loss: 0.5066 - acc: 0.8369
+3328/3768 [=========================>....] - ETA: 8s - loss: 0.4947 - acc: 0.8377 
+3584/3768 [===========================>..] - ETA: 3s - loss: 0.4850 - acc: 0.8393
+3768/3768 [==============================] - 77s 20ms/sample - loss: 0.4771 - acc: 0.8408 - val_loss: 0.3998 - val_acc: 0.8335
+Epoch 3/100
+
+ 256/3768 [=>............................] - ETA: 1:09 - loss: 0.1352 - acc: 0.9531
+ 512/3768 [===>..........................] - ETA: 1:04 - loss: 0.1602 - acc: 0.9453
+ 768/3768 [=====>........................] - ETA: 57s - loss: 0.1492 - acc: 0.9414 
+1024/3768 [=======>......................] - ETA: 52s - loss: 0.1366 - acc: 0.9473
+1280/3768 [=========>....................] - ETA: 47s - loss: 0.1303 - acc: 0.9523
+1536/3768 [===========>..................] - ETA: 42s - loss: 0.1279 - acc: 0.9544
+1792/3768 [=============>................] - ETA: 37s - loss: 0.1322 - acc: 0.9537
+2048/3768 [===============>..............] - ETA: 32s - loss: 0.1289 - acc: 0.9556
+2304/3768 [=================>............] - ETA: 27s - loss: 0.1344 - acc: 0.9531
+2560/3768 [===================>..........] - ETA: 22s - loss: 0.1327 - acc: 0.9539
+2816/3768 [=====================>........] - ETA: 17s - loss: 0.1313 - acc: 0.9535
+3072/3768 [=======================>......] - ETA: 13s - loss: 0.1309 - acc: 0.9538
+3328/3768 [=========================>....] - ETA: 8s - loss: 0.1285 - acc: 0.9531 
+3584/3768 [===========================>..] - ETA: 3s - loss: 0.1278 - acc: 0.9528
+3768/3768 [==============================] - 76s 20ms/sample - loss: 0.1240 - acc: 0.9544 - val_loss: 0.4113 - val_acc: 0.8385
+Epoch 00003: early stopping
+
+ 32/951 [>.............................] - ETA: 24s - loss: 0.6199 - acc: 0.8438
+ 64/951 [=>............................] - ETA: 16s - loss: 0.3544 - acc: 0.9062
+ 96/951 [==>...........................] - ETA: 13s - loss: 0.4263 - acc: 0.8542
+128/951 [===>..........................] - ETA: 12s - loss: 0.3644 - acc: 0.8750
+160/951 [====>.........................] - ETA: 11s - loss: 0.4002 - acc: 0.8500
+192/951 [=====>........................] - ETA: 11s - loss: 0.4045 - acc: 0.8438
+224/951 [======>.......................] - ETA: 10s - loss: 0.4087 - acc: 0.8438
+256/951 [=======>......................] - ETA: 9s - loss: 0.4146 - acc: 0.8398 
+288/951 [========>.....................] - ETA: 9s - loss: 0.4422 - acc: 0.8333
+320/951 [=========>....................] - ETA: 8s - loss: 0.4290 - acc: 0.8375
+352/951 [==========>...................] - ETA: 8s - loss: 0.4066 - acc: 0.8438
+384/951 [===========>..................] - ETA: 7s - loss: 0.4123 - acc: 0.8438
+416/951 [============>.................] - ETA: 7s - loss: 0.4048 - acc: 0.8486
+448/951 [=============>................] - ETA: 6s - loss: 0.4027 - acc: 0.8527
+480/951 [==============>...............] - ETA: 6s - loss: 0.4002 - acc: 0.8521
+512/951 [===============>..............] - ETA: 5s - loss: 0.4208 - acc: 0.8496
+544/951 [================>.............] - ETA: 5s - loss: 0.4125 - acc: 0.8511
+576/951 [=================>............] - ETA: 4s - loss: 0.4278 - acc: 0.8420
+608/951 [==================>...........] - ETA: 4s - loss: 0.4137 - acc: 0.8454
+640/951 [===================>..........] - ETA: 3s - loss: 0.4032 - acc: 0.8469
+672/951 [====================>.........] - ETA: 3s - loss: 0.4039 - acc: 0.8467
+704/951 [=====================>........] - ETA: 3s - loss: 0.3978 - acc: 0.8494
+736/951 [======================>.......] - ETA: 2s - loss: 0.3908 - acc: 0.8519
+768/951 [=======================>......] - ETA: 2s - loss: 0.3777 - acc: 0.8581
+800/951 [========================>.....] - ETA: 1s - loss: 0.3732 - acc: 0.8600
+832/951 [=========================>....] - ETA: 1s - loss: 0.3673 - acc: 0.8642
+864/951 [==========================>...] - ETA: 1s - loss: 0.3729 - acc: 0.8600
+896/951 [===========================>..] - ETA: 0s - loss: 0.3650 - acc: 0.8627
+928/951 [============================>.] - ETA: 0s - loss: 0.3649 - acc: 0.8631
+951/951 [==============================] - 12s 13ms/sample - loss: 0.3599 - acc: 0.8654
+[0.35987365773862345, 0.86540484]
+[Finished in 408.7s]
